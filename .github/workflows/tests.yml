@@ -18,7 +18,7 @@ jobs:
         run: | 
           choco install --no-progress openssl
           refreshenv
-          ls "C:\Program Files\OpenSSL-Win64\"
+          Get-ChildItem -Recurse "C:\Program Files\OpenSSL-Win64\"
 
       - name: Install D compiler
         uses: dlang-community/setup-dlang@v1
