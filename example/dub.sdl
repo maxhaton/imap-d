@@ -12,4 +12,5 @@ configuration "appveyor" {
 	libs "libssl" "libcrypto" platform="windows"
 	lflags "/LIBPATH:C:\\OpenSSL-v111-Win32\\lib" platform="windows-x86"
 	lflags "/LIBPATH:C:\\OpenSSL-v111-Win64\\lib" platform="windows-x86_64"
+	lflags "/VERBOSE:LIB" platform="windows-x86_64"
 }
