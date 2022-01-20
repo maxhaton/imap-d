@@ -19,7 +19,6 @@ jobs:
           choco install --no-progress openssl
           Copy-Item "C:\Program Files\OpenSSL-Win64\lib\libssl.lib" -Destination $PSScriptRoot
           $env:LIB += ";%ProgramFiles%\OpenSSL-Win64\lib"
-          refreshenv
           Get-ChildItem -Recurse "C:\Program Files\OpenSSL-Win64\lib"
           
       - name: Install D compiler
