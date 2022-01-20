@@ -17,9 +17,10 @@ jobs:
         if: matrix.os == 'windows-latest'
         run: | 
           choco install --no-progress openssl
+          $env:Path += ";C:\Program Files\OpenSSL-Win64\lib"
           refreshenv
           Get-ChildItem -Recurse "C:\Program Files\OpenSSL-Win64\"
-
+          
       - name: Install D compiler
         uses: dlang-community/setup-dlang@v1
         with:
