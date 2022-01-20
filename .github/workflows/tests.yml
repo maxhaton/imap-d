@@ -16,8 +16,9 @@ jobs:
       - name: Install openssl on Windows
         if: matrix.os == 'windows-latest'
         run: | 
-          choco install openssl
+          choco install --no-progress openssl
           refreshenv
+          ls C:\Program Files\OpenSSL-Win64\
 
       - name: Install D compiler
         uses: dlang-community/setup-dlang@v1
