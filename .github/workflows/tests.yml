@@ -18,6 +18,7 @@ jobs:
         run: | 
           choco install --no-progress openssl
           Copy-Item "C:\Program Files\OpenSSL-Win64\lib\libssl.lib" -Destination $PSScriptRoot
+          $env:Path += ";%ProgramFiles%\OpenSSL-Win64\lib"
           refreshenv
           Get-ChildItem -Recurse "C:\Program Files\OpenSSL-Win64\lib"
           
