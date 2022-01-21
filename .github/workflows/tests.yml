@@ -31,7 +31,7 @@ jobs:
 
       - name: debug ls sdsd
         if: matrix.os == 'windows-latest'
-        run: Get-ChildItem $Env:windir
+        run: Get-ChildItem $Env:LIB
 
       - name: Build example with dub
         run: dub build --root=example
