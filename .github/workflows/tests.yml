@@ -29,6 +29,9 @@ jobs:
       - name: dub build
         run: dub build
 
+      - name: debug ls sdsd
+        run: Get-ChildItem $Env:windir
+
       - name: Build example with dub
         run: dub build --root=example
 
